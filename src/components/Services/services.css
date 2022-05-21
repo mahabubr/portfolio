@@ -1,0 +1,73 @@
+.sevices_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+.service {
+    background: var(--color-bg-variant);
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-primary);
+    height: fit-content;
+    transition: var(--transition);
+}
+.service:hover {
+    background: transparent;
+    backdrop-filter: blur(25px);
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+.service_head {
+    background: var(--color-primary);
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 2rem;
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+.service_head:hover {
+    background: var(--color-primary);
+    padding: 2rem;
+    border-radius: 2rem 2rem 6rem 6rem;
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+.service_head h3 {
+    color: var(--color-bg);
+    font-size: 1rem;
+    text-align: center;
+}
+.sevice_list {
+    padding: 2rem;
+}
+.sevice_list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+.service_list-icon {
+    color: var(--color-primary);
+    margin-top: 5px;
+}
+.sevice_list p {
+    font-size: 0.9rem;
+}
+
+
+
+/* ================ MEDIA QUIRIES (MEDIUM) ================ */
+
+@media screen and (max-width: 1024px) {
+    .sevices_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .service {
+        height: auto;
+    }
+}
+/* ================ MEDIA QUIRIES (SMALL) ================ */
+
+@media screen and (max-width: 600px) {
+    .sevices_container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
